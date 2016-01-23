@@ -1,0 +1,11 @@
+<h1>Banners</h1>
+<ul>
+    {% for banner in object_list %}
+    <li>{{ banner.name }}
+        <a href="{% url 'banner_edit' banner.id %}">edit</a>
+        <a href="{% url 'banner_delete' banner.id %}">delete</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'banner_new' %}">New</a>

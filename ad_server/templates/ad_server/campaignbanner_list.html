@@ -1,0 +1,11 @@
+<h1>Campaigns & Banners</h1>
+<ul>
+    {% for c_b in object_list %}
+    <li>{{ c_b.campaign }} {{ c_b.banner }}
+        <a href="{% url 'campaign_banner_edit' c_b.id %}">edit</a>
+        <a href="{% url 'campaign_banner_delete' c_b.id %}">delete</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'campaign_banner_new' %}">New</a>
